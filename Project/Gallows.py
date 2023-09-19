@@ -1,6 +1,16 @@
 from random import choice
-words = ["deprecative","disproportion","aquarium","conductor","checkmate","eloquent","currant","acolyte","catacomb","effeminacy","computer","access","bookcase","communicable","ending","autumn","exemplary","floral","freeman","boaster","emblematic","fortune","beautiful","calabash","bottommost","copulation","changeability","calamity","bloody","antedate","dignity","babyhood","deliberatea","crisis","comfortless","fiddlededee","barefoot","decision"]
+words = []
+
+f = open('dictionary.txt')
+for i in f.readlines():
+    if i[-1] == '\n':
+        i = i[:-1]
+    words.append(i)
+f.close()
+
 word = choice(words)
+alphabet = []
+
 print("You have 11 life")
 letters =[]
 for i in range(len(word)):
@@ -14,7 +24,9 @@ end =0
 while game and life>0:
     letter = input("Enter a word or a letter: ")
     letter = letter.lower()
-    if len(letter)>1:
+    if letter in alphabet:
+        print("This letter was")
+    elif len(letter)>1:
         # правильные слова
         if letter == word:
             game = False
@@ -23,6 +35,7 @@ while game and life>0:
             life -= 1
             print("You have",life,'life')
     else:
+        alphabet.append(letter)
         # правильные буквы
         for i in range(len(word)):
             if letter == word[i]:
