@@ -3,6 +3,12 @@ from time import sleep
 from os import system
 words = []
 
+print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.\nAre you ready?')
+ans = input(">>> ")
+if ans.lower() == "no":
+    exit(0)
+system("cls")
+
 f = open('dictionary.txt')
 for i in f.readlines():
     if i[-1] == '\n':
