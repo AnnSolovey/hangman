@@ -47,5 +47,4 @@ kingdom
 mirage
 museum
 tights
-tea
 space
