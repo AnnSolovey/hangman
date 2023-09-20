@@ -1,0 +1,12 @@
+Список мобильных игр (виселица) для анализа:
+https://play.google.com/store/apps/details?id=hang.man.two.player.games (Виселица Игра: игры на двоих); Оценка: 4,6
+https://play.google.com/store/apps/details?id=ar.com.soodex.ahorcado (Виселица: чемпионат лиги); Оценка: 4,4
+https://play.google.com/store/apps/details?id=com.tellmewow.senior.hangman (Виселица); Оценка: 3,9
+https://play.google.com/store/apps/details?id=com.k17.Viselitsa (Виселица словесная головоломка); Оценка: 3,6 
+https://play.google.com/store/apps/details?id=com.oneup.hangman.language.free (Виселица); Оценка: 1,5
+
+План анализа по каждому приложения:
+1) Функционал
+2) Интерфейс
+3) Требования к устройству, потребление энергии
+4) Анализ отзывов пользователей приложения
