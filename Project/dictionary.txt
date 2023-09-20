@@ -38,5 +38,6 @@ exemplary
 floral
 fortune
 fearsome
+hangman
 heavenly
 humiliating
