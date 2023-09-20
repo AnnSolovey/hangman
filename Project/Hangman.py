@@ -24,17 +24,17 @@ while True:
     word = choice(words)
     alphabet = []
 
-    print("You have 11 life")
     letters =[]
     for i in range(len(word)):
         letters.append('_')
-    print(''.join(letters))
     life = 11
     game = True
     let =0
     end =0
     # слова
     while game and life>0:
+        print("You have", life, "life")
+        print(''.join(letters))
         letter = input("Enter a word or a letter: ")
         letter = letter.lower()
         system("cls")
@@ -60,8 +60,6 @@ while True:
                     if let == len(word):
                         life -= 1
                         let =0
-                        print("You have", life, 'life')
-            print(''.join(letters))
             let = 0
         # конец цикла
         if end == len(word):
