@@ -3,10 +3,14 @@ from time import sleep
 from os import system
 words = []
 
-print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.\nAre you ready?')
-ans = input(">>> ")
-if ans.lower() == "no":
-    exit(0)
+print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.')
+while True:
+    print("Are you ready?")
+    ans = input(">>> ")
+    if ans.lower() == "no":
+        exit(0)
+    elif ans.lower() == "yes":
+        break
 system("cls")
 
 f = open('dictionary.txt')
@@ -70,7 +74,10 @@ while True:
         print("You win!")
     sleep(5)
     system("cls")
-    print("Do you want to play again?")
-    ans = input(">>> ")
-    if ans.lower() == "no":
-        break
+    while True:
+        print("Do you want to play again?")
+        ans = input(">>> ")
+        if ans.lower() == "no":
+            exit(0)
+        elif ans.lower() == "yes":
+            break
