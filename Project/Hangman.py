@@ -40,8 +40,12 @@ while True:
         system("cls")
         if letter == "hint":
             for i in range(len(letters)):
-                if i == "_":
+                if letters[i] == '_':
                     letters[i] = word[i]
+                    for j in range(i+1, len(letters)):
+                      if word[j] == word[i]:
+                        letters[j] = word[j]
+                    break
         elif letter in alphabet:
             print("This letter was")
         elif len(letter)>1:
