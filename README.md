@@ -1,1 +1,1 @@
-# the_hangman
+# hangman
