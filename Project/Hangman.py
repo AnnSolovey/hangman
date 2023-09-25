@@ -3,7 +3,7 @@ from time import sleep
 from os import system
 words = []
 
-print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.')
+print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.n\If you need help, enter "hint"')
 while True:
     print("Are you ready?")
     ans = input(">>> ")
@@ -38,7 +38,11 @@ while True:
         letter = input("Enter a word or a letter: ")
         letter = letter.lower()
         system("cls")
-        if letter in alphabet:
+        if letter == "hint":
+            for i in range(len(letters)):
+                if i == "_":
+                    letters[i] = word[i]
+        elif letter in alphabet:
             print("This letter was")
         elif len(letter)>1:
             # правильные слова
