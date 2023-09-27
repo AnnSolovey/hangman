@@ -3,12 +3,15 @@ from time import sleep
 from os import system
 words = []
 
-print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.n\If you need help, enter "hint"')
+print('This is the game "Hangman"')
 while True:
     print("Are you ready?")
+    print('(or you need "rules")')
     ans = input(">>> ")
     if ans.lower() == "no":
         exit(0)
+    elif ans.lower() == "rules" or ans.lower() == "rule":
+        print('You need to guess a word by entering letters from the keyboard.\nIf you need help, enter "hint"')
     elif ans.lower() == "yes":
         break
 system("cls")
