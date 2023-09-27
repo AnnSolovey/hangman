@@ -3,7 +3,7 @@ from time import sleep
 from os import system
 words = []
 
-print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.\nIf you need help, enter "hint"')
+print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.n\If you need help, enter "hint"')
 while True:
     print("Are you ready?")
     ans = input(">>> ")
@@ -42,9 +42,12 @@ while True:
             for i in range(len(letters)):
                 if letters[i] == '_':
                     letters[i] = word[i]
+                    alphabet.append(word[i])
+                    end += 1
                     for j in range(i+1, len(letters)):
                       if word[j] == word[i]:
                         letters[j] = word[j]
+                        end += 1
                     break
         elif letter in alphabet:
             print("This letter was")
