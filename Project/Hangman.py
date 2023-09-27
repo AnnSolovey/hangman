@@ -3,7 +3,7 @@ from time import sleep
 from os import system
 words = []
 
-print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.n\If you need help, enter "hint"')
+print('This is the game "Hangman".\nYou need to guess a word by entering letters from the keyboard.\nIf you need help, enter "hint"')
 while True:
     print("Are you ready?")
     ans = input(">>> ")
