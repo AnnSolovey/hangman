@@ -30,7 +30,6 @@ while True:
     life = 11
     game = True
     let =0
-    end =0
     # слова
     while game and life>0:
         print("You have", life, "life")
@@ -42,6 +41,7 @@ while True:
             for i in range(len(letters)):
                 if letters[i] == '_':
                     letters[i] = word[i]
+                    alphabet.append(word[i])
                     for j in range(i+1, len(letters)):
                       if word[j] == word[i]:
                         letters[j] = word[j]
@@ -61,7 +61,6 @@ while True:
             for i in range(len(word)):
                 if letter == word[i]:
                     letters[i] = letter
-                    end +=1
                 # неправильные буквы
                 else:
                     let+=1
@@ -70,7 +69,7 @@ while True:
                         let =0
             let = 0
         # конец цикла
-        if end == len(word):
+        if "_" not in letters:
             game = False
     # конец
     print("This word is", word)
